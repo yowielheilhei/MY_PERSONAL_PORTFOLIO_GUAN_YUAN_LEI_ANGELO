@@ -1,47 +1,26 @@
-/* ==========================================================================
-   PORTFOLIO INTERACTIVITY LOGIC
-   ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-
-
-    /* ----------------------------------------------------------------------
-       X. PARAGRAPH SCROLL ANIMATION LOGIC
-       ---------------------------------------------------------------------- */
-    
-    // Find every paragraph inside your project items
     const projectParagraphs = document.querySelectorAll('.project-item p');
-
-    // Create the lookout (Observer)
     const paragraphObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            // If the paragraph has scrolled into view...
             if (entry.isIntersecting) {
-                // Add the CSS class to animate it
                 entry.target.classList.add('show-text');
-                
-                // Optional: Stop watching it once it animates so it only happens once
                 observer.unobserve(entry.target); 
             }
         });
     }, {
-        // Trigger the animation when 20% of the paragraph is visible
         threshold: 0.2 
     });
 
-    // Tell the observer to watch every single paragraph we found
     projectParagraphs.forEach(p => {
         paragraphObserver.observe(p);
     });
     
-/* ----------------------------------------------------------------------
-       1. GALLERY CAROUSEL LOGIC (With External Links)
-       ---------------------------------------------------------------------- */
+
     const images = document.querySelectorAll('.gallery-carousel img');
     const projectTitle = document.querySelector('.project-item.full-width h3');
     const projectDesc = document.querySelector('.project-item.full-width p');
     
-    // Buttons
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
     
@@ -94,13 +73,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderImages();
 
-    // 1. Logic for clicking the Images directly
     images.forEach((img, index) => {
-        
         img.addEventListener('mouseenter', () => {
-            // Change cursor so users know the center one is a clickable link
             if (positions[index] === 'pos-3') {
-                img.style.cursor = 'alias'; // 'alias' usually shows a little arrow/link icon
+                img.style.cursor = 'alias'; 
             } else {
                 img.style.cursor = 'pointer';
             }
@@ -109,17 +85,14 @@ document.addEventListener("DOMContentLoaded", () => {
         img.addEventListener('click', () => {
             let currentPos = positions[index];
 
-            // If it's the center image, OPEN THE LINK!
             if (currentPos === 'pos-3') {
                 const link = img.getAttribute('data-link');
-                // Only open if the link isn't empty and isn't just a "#"
                 if (link && link !== "#") {
-                    window.open(link, '_blank'); // Opens in a new tab
+                    window.open(link, '_blank'); 
                 }
-                return; // Stop here so the carousel doesn't rotate
+                return; 
             } 
 
-            // Otherwise, ROTATE THE CAROUSEL
             if (currentPos === 'pos-4') { positions.unshift(positions.pop()); } 
             else if (currentPos === 'pos-5') { positions.unshift(positions.pop()); positions.unshift(positions.pop()); } 
             else if (currentPos === 'pos-2') { positions.push(positions.shift()); } 
@@ -130,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 2. Logic for clicking the Left/Right Buttons
     if (prevBtn && nextBtn) {
         nextBtn.addEventListener('click', () => {
             positions.unshift(positions.pop());
@@ -145,14 +117,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ----------------------------------------------------------------------
-       2. MODAL POP-UP LOGIC
-       ---------------------------------------------------------------------- */
+
     const modal = document.getElementById('artistModal');
     const badge = document.getElementById('artistBadge');
     const closeBtn = document.querySelector('.close-modal');
 
-    // Only run if the modal elements actually exist on the page
     if (modal && badge && closeBtn) {
         badge.addEventListener('click', () => {
             modal.classList.add('show');
@@ -169,10 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
-    /* ----------------------------------------------------------------------
-       3. SCROLL REVEAL LOGIC
-       ---------------------------------------------------------------------- */
     const hiddenElements = document.querySelectorAll('.hidden-scroll');
     
     if (hiddenElements.length > 0) {
@@ -187,18 +152,12 @@ document.addEventListener("DOMContentLoaded", () => {
         hiddenElements.forEach((el) => observer.observe(el));
     }
 
-});
-
-/* ----------------------------------------------------------------------
-       4. SIDE SCROLL WHEEL LOGIC
-       ---------------------------------------------------------------------- */
     const wheel = document.getElementById('scrollWheel');
     const wheelLabels = document.querySelectorAll('.wheel-label');
     const sections = document.querySelectorAll('section');
 
     if (wheel && wheelLabels.length > 0) {
         
-        // 1. Click text to scroll to that section
         wheelLabels.forEach(label => {
             label.addEventListener('click', () => {
                 const targetId = label.getAttribute('data-target');
@@ -209,21 +168,14 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        // 2. Watch the scroll position to rotate the wheel
         const wheelObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                // If a section is taking up at least 50% of the screen...
                 if (entry.isIntersecting) {
                     const activeId = entry.target.id;
                     
-                    // Find the matching label in the wheel
                     wheelLabels.forEach(label => {
                         if (label.getAttribute('data-target') === activeId) {
-                            
-                            // Make it dark text
                             label.classList.add('active');
-                            
-                            // Rotate the whole wheel based on its data-angle
                             const angle = label.getAttribute('data-angle');
                             wheel.style.transform = `rotate(${angle}deg)`;                            
                         } else {
@@ -232,66 +184,46 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 }
             });
-        }, { threshold: 0.5 }); // 50% of the section must be visible to trigger
+        }, { threshold: 0.5 }); 
 
-        // Tell the observer to watch all your main sections
         sections.forEach(section => {
             wheelObserver.observe(section);
         });
     }
 
-    /* ----------------------------------------------------------------------
-       5. AUTO-HIDE SCROLL WHEEL LOGIC
-       ---------------------------------------------------------------------- */
     const sideNav = document.querySelector('.side-scroll-nav');
     let scrollTimer;
 
     if (sideNav) {
-        // Show the wheel immediately when the page loads
         sideNav.classList.add('is-visible');
         
-        // Hide it after 2 seconds if they don't scroll
         scrollTimer = setTimeout(() => {
             sideNav.classList.remove('is-visible');
         }, 2000);
 
-        // Listen for any scrolling on the page
         window.addEventListener('scroll', () => {
-            
-            // 1. Show the wheel because the user is scrolling
             sideNav.classList.add('is-visible');
-
-            // 2. Clear the old timer so it doesn't hide while we are still scrolling
             clearTimeout(scrollTimer);
-
-            // 3. Set a new timer to hide the wheel 1.5 seconds after they STOP scrolling
             scrollTimer = setTimeout(() => {
                 sideNav.classList.remove('is-visible');
-            }, 500); // 1500 milliseconds = 1.5 seconds
+            }, 500); 
         });
     }
 
-    /* ----------------------------------------------------------------------
-       6. ABOUT IMAGE MODAL LOGIC
-       ---------------------------------------------------------------------- */
     const aboutModal = document.getElementById('aboutImageModal');
     const aboutImgBtn = document.getElementById('aboutImage');
     const closeAboutBtn = document.getElementById('closeAboutModal');
 
-    // Only run if the elements exist on the page
     if (aboutModal && aboutImgBtn && closeAboutBtn) {
         
-        // Open modal when the diploma image is clicked
         aboutImgBtn.addEventListener('click', () => {
             aboutModal.classList.add('show');
         });
 
-        // Close modal when the "X" is clicked
         closeAboutBtn.addEventListener('click', () => {
             aboutModal.classList.remove('show');
         });
 
-        // Close modal when clicking outside the box (on the dark background)
         window.addEventListener('click', (event) => {
             if (event.target === aboutModal) {
                 aboutModal.classList.remove('show');
@@ -299,19 +231,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ----------------------------------------------------------------------
-       7. MOBILE HAMBURGER MENU LOGIC
-       ---------------------------------------------------------------------- */
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navLinksContainer = document.querySelector('.nav-links');
 
     if (mobileMenuBtn && navLinksContainer) {
-        // Toggle the menu when clicking the hamburger icon
         mobileMenuBtn.addEventListener('click', () => {
             navLinksContainer.classList.toggle('mobile-active');
         });
 
-        // Automatically close the menu when a user clicks any link inside it
         const navLinks = navLinksContainer.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -320,3 +247,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+}); // <--- All logic is now safely closed and contained right here!
