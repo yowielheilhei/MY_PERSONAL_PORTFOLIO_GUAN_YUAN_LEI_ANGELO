@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuan Lei Angelo J. Guan | Personal Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="side-scroll-nav">
+        <div class="scroll-wheel" id="scrollWheel">
+            <div class="wheel-circle"></div>
+            <ul class="wheel-labels">
+                <li class="wheel-label" data-target="home" data-angle="60">HOME</li>
+                <li class="wheel-label" data-target="about" data-angle="30">ABOUT</li>
+                <li class="wheel-label" data-target="skills" data-angle="0">SKILLS</li>
+                <li class="wheel-label" data-target="projects" data-angle="-30">PROJECTS</li>
+                <li class="wheel-label" data-target="contact" data-angle="-60">CONTACT</li>
+            </ul>
+        </div>
+    </nav>
+    <header class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-image">
+                <img src="./assets/images/yuanleipicture.png" alt="Yuan Lei Angelo J. Guan">
+            </div>
+            <div class="hero-text">
+               <p>Hello, <span class="mynameis">My Name is</span></p>
+                <h1>YUAN LEI ANGELO J. GUAN</h1>
+                <span id="artistBadge" class="badge" style="cursor: pointer;" href="https://www.facebook.com/yowie.lheilhei">I'M A MULTIMEDIA ARTIST</span>
+            </div>
+        </section>
+            
+       <section id="about" class="about-section container">
+                 <!-- Add 'hidden-scroll' here -->
+            <div class="about-image hidden-scroll">
+                <!-- Added id="aboutImage" and style="cursor: pointer;" -->
+                <img id="aboutImage" src="./assets/images/diplomaaboutme.png" alt="Academic Achievements" style="cursor: pointer; transition: transform 0.3s ease;">
+            </div>
+            <!-- Add 'hidden-scroll' here too -->
+            <div class="about-content hidden-scroll">
+                <h2>ABOUT <span>ME</span></h2>
+                <p>As a Computer Engineering Technology student, I operate at the intersection of robust system architecture and purposeful visual design. My expertise is defined by a unique synergy between "under-the-hood" infrastructure and "front-facing" creative output, allowing me to approach digital problem-solving from a holistic perspective. I am driven by the challenge of making technical complexity invisible through clean code and intuitive design, ensuring that every system I build is as efficient as it is engaging.</p>
+                <p>On the technical front, I specialize in the intricate configuration of network protocols and hardware systems. My academic and practical background provides me with a deep understanding of how network latency, server configurations, and hardware limitations impact the end-user experience. This infrastructure-aware approach ensures that the digital solutions I develop are built on a foundation of stability and high performance, capable of handling complex system integrations.</p>
+                <p>Complementing this technical foundation is a passion for high-impact visual storytelling and graphic design. I believe in a philosophy of data-driven aesthetics, where engineering logic is applied to solve creative problems. Whether I am crafting brand identities, designing digital logos, or developing visual assets for organizational media, I focus on translating technical complexity into a visual language that is accessible and compelling for a diverse audience.</p>
+                <p>My development work bridges these two worlds by turning complex technical requirements into immersive web applications and responsive user interfaces. I don't just build for functionality; I build for people. By prioritizing user-centric engineering, I create digital experiences that are structured and scalable while maintaining a high level of aesthetic impact, ensuring that the final product is both a powerful tool and a seamless experience.</p>
+                <p>Beyond technical execution, I bring a unique perspective to collaborative environments through my experience in technical operations and multimedia production. I often act as a cross-functional bridge, translating sophisticated engineering requirements for creative teams and ensuring that artistic visions remain technically feasible. This comprehensive skill set allows me to manage the full lifecycle of a digital product—from the initial network configuration to the final, user-facing broadcast.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section container">
+            <h2>S <span>K I L L S</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="./assets/images/videoeditingpicture.png" alt="Video Editing">
+                    <h3>Video Editing</h3>
+                    <p>Figma, Canva, Affinity</p>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/images/graphicsedsignpicture.png" alt="Graphic Design">
+                    <h3>Graphic Design</h3>
+                    <p>Photoshop, Illustrator, InDesign</p>
+                </div>  
+                <div class="skill-card">
+                    <img src="./assets/images/Audiovisualpicture.png" alt="Audio Visuals">
+                    <h3>Audio Visual</h3>
+                    <p>Adobe Audition, Fl Studio</p>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/images/Audiovisualpicture.png" alt="Audio Visuals">
+                    <h3>Photo Editing</h3>
+                    <p>Adobe Lightroom, Photoshop</p>
+                </div>
+                <div class="skill-card">
+                    <img src="./assets/images/uxdesignpicture.png" alt="UI/UX Design">
+                    <h3>UI/UX Design</h3>
+                    <p>Figma, Sketch, Adobe XD</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section container">
+            <h2 id = "projects">P R O <span>J E C T</span></h2>
+                <article class="project-item full-width">
+                   <div class="gallery-carousel">
+                        <button class="carousel-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+
+                        <!-- Changed 'href' to 'data-link' -->
+                        <img src="./assets/images/flowers.png" alt="Film Still 1" data-link="https://www.tiktok.com/@yowie.lheilhei/video/7522636953758551304?is_from_webapp=1&sender_device=pc&web_id=7635881958745032200">
+                        <img src="./assets/images/rizal.png" alt="Film Still 2" data-link="https://drive.google.com/file/d/1X5zwB-zQ1fGBZL6-CeAPqJN_Oob2os4D/view?usp=sharing">
+                        <img src="./assets/images/medyoshortfilm.png" alt="Film Still 3" data-link="https://www.tiktok.com/@yowie.lheilhei/video/7232694405138877702">
+                        <img src="./assets/images/plates.png" alt="Film Still 4" data-link="https://www.tiktok.com/@yowie.lheilhei/video/7522635161826118919?is_from_webapp=1&sender_device=pc&web_id=7635881958745032200">
+                        <img src="./assets/images/harana.png" alt="Film Still 5" data-link="https://img.favpng.com/5/19/2/secret-emojis-1-smiley-emoticon-clip-art-png-favpng-ERSLbMqEtU979wUXP30cXyEXn.jpg">
+
+                        <button class="carousel-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    <!-- Your existing text elements -->
+                    <h3>SHORT FILMS/VIDEOS</h3>
+                    <p>My creative process in short-form video production is driven by a focus on high-fidelity visual storytelling and seamless technical execution. I combine my technical background in live broadcasting with a sharp eye for graphic design to produce engaging content that resonates across digital platforms. From the initial conceptualization and storyboarding to the final edit, I ensure every frame serves a specific purpose in the narrative. My experience in managing backend stream operations and multimedia production allows me to optimize video performance for real-time engagement and diverse viewing environments. I specialize in translating complex ideas into concise, high-impact sequences that maintain a balance between aesthetic appeal and functional clarity. By leveraging modern editing tools and professional-grade arrangements, I deliver professional video solutions that effectively bridge the gap between technical complexity and user-friendly entertainment.</p>
+                </article>
+            <div class="clothing-designs">
+                <article class="project-item flex-row">
+                    <img src="./assets/images/cetejersey.png" alt="CETE Jersey">
+                    <div class="project-text">
+                        <h3>C E T E <br><span> J E R S E Y</span> </h3>
+                        <p>Computer Engineering Technology department. Utilizing a striking gradient that transitions from a bold, energetic red to a deep, commanding navy, the design visually communicates both passion and technical professionalism. I focused on clean typography and strategic logo placement to ensure the department's branding remains highly visible and impactful, whether on the court or during campus events.</p>
+                        <p>The process involved conceptualizing the visual elements and translating them into precise 3D digital mockups, demonstrating my proficiency in industry-standard graphic design software. By balancing aesthetic appeal with the functional requirements of athletic wear, I ensured the final digital output was both visually striking and optimized for physical production. Ultimately, this project highlights my ability to take a conceptual branding requirement and deliver a cohesive, high-quality visual asset that fosters team spirit and organizational pride.</p>
+                </article>
+
+                <article class="project-item flex-row-reverse">
+                    <img src="./assets/images/acetsshirts.png" alt="ACETS Orgshirt">
+                    <div class="project-text">
+                        <h3>A C E T S <br> <span> O R G S H I R T</span></h3>
+                        <p>The design utilizes a modern, dynamic layout featuring a crisp white base heavily contrasted by sharp diagonal color blocking in slate grey and deep crimson. A defining feature of this project is the intricate circuit board motif seamlessly integrated into the dark red panels, serving as a deliberate visual representation of the organization's engineering and technology roots. I prioritized clean logo placement and authoritative typography—highlighted by the prominent "PRESIDENT" text on the reverse—to project a sense of leadership and professional unity.</p>
+                        <p> By developing high-fidelity 3D digital mockups, I ensured that the complex geometric patterns aligned perfectly across the garment's seams while remaining optimized for physical manufacturing. Ultimately, this project illustrates my ability to translate abstract technical themes into stylish, wearable branding that fosters organizational pride and a cohesive team identity.</p>
+                    </div>
+                </article>
+
+                <article class="project-item flex-row">
+                    <img src="./assets/images/yunkyshirt.png" alt="YUNKY Shirt">
+                    <div class="project-yunky">
+                        <h3>Y U N K Y<span class="yunky-blue"> S H I R T</span></h3>
+                        <p>This project showcases my approach to contemporary streetwear design, blending minimalist apparel aesthetics with complex, tech-inspired graphics. The front of the garment utilizes a highly restrained approach, featuring a subtle, stylized blue logo on the left chest to maintain a clean and versatile look. In striking contrast, the reverse side serves as a canvas for a bold, high-impact graphic that incorporates layered typography, digital barcode motifs, and abstract photographic elements.</p>
+                        <p>By utilizing a monochromatic blue color palette against a stark black background, the design evokes a modern, slightly cyberpunk atmosphere that resonates with current urban fashion trends. The process required careful spatial composition and the creation of high-fidelity digital mockups to ensure the intricate back graphic would translate effectively for physical apparel production. Ultimately, this project highlights my ability to balance subtle branding with dynamic visual artistry, resulting in cohesive apparel that functions as wearable digital art.</p>
+                    </div>
+                </article>
+            </div>
+
+           <div class="poster-grid">
+                <div class="poster-card">
+                    <img src="./assets/images/avengersendgame.png" alt="Avengers Style Poster" href="https://youtu.be/TcMBFSGVi1c?si=xOpfx5Cyhh4zSaQ_">
+                    <div class="poster-info">
+                        <h3>AVENGERS ENDGAME</h3>
+                        <p>A cinematic fan-made poster design inspired by the epic conclusion of the Infinity Saga, featuring complex character composition and dramatic lighting.</p>
+                    </div>
+                </div>
+
+                <div class="poster-card">
+                    <img src="./assets/images/house.png" alt="House Poster">
+                    <div class="poster-info">
+                        <h3>HOUSE</h3>
+                        <p>A haunting and atmospheric poster concept exploring architectural geometry, shadow play, and eerie tension in a modern setting.</p>
+                    </div>
+                </div>
+
+                <div class="poster-card">
+                    <img src="./assets/images/consumatumest.png" alt="Contagium Poster">
+                    <div class="poster-info">
+                        <h3>CONTAGIUM</h3>
+                        <p>A visually striking thriller poster combining grunge textures with bold typography to convey a sense of impending outbreak and suspense.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">P h o t o <span>g r a p h y</span></h3>
+            <div class="photography-bento">
+                <!-- Card 1: Tall (Left) -->
+                <div class="bento-card bento-tall flex-col-reverse">
+                    <div class="bento-text">
+                        <h3>Portraits</h3>
+                        <p>Capturing the essence of human expression and emotion.</p>
+                    </div>
+                    <img src="./assets/images/yuanguitar.jpg" alt="Photography 1">
+                </div>
+
+                <!-- Card 2: Wide (Top Right) -->
+                <div class="bento-card bento-wide flex-row">
+                    <div class="bento-text">
+                        <h3>Galaxy</h3>
+                        <p>Exploring the vastness and beauty of the cosmos.</p>
+                    </div>
+                    <img src="./assets/images/galaxy.jpeg" alt="Photography 2">
+                </div>
+
+                <!-- Card 3: Square (Middle Center) -->
+                <div class="bento-card bento-square flex-col">
+                    <div class="bento-text">
+                        <h3>Unique Coloring</h3>
+                        <p>Exploring innovative color palettes and their impact on visual storytelling.</p>
+                    </div>
+                    <img src="./assets/images/jelo.jpg" alt="Photography 3">
+                </div>
+
+                <!-- Card 4: Square (Middle Right) -->
+                <div class="bento-card bento-square flex-col">
+                    <div class="bento-text">
+                        <h3>Long Exposures</h3>
+                        <p>Capturing motion and light in unique ways.</p>
+                    </div>
+                    <img src="./assets/images/moon.jpg" alt="Photography 4">
+                </div>
+
+                <!-- Card 5: Wide (Bottom Left) -->
+                <div class="bento-card bento-wide flex-row">
+                    <div class="bento-text">
+                        <h3>Object Subject</h3>
+                        <p>Exploring the relationship between objects and their surroundings.</p>
+                    </div>
+                    <img src="./assets/images/object.jpg" alt="Photography 5">
+                </div>
+
+                <!-- Card 6: Square (Bottom Right) -->
+                <div class="bento-card bento-square flex-col">
+                    <div class="bento-text">
+                        <h3>Album Covers</h3>
+                        <p>Creating visually striking album artwork.</p>
+                    </div>
+                    <img src="./assets/images/medisina.jpg" alt="Photography 6">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section container">
+            <div class="contact-wrapper">
+                
+                <!-- Left Side: Social Media -->
+                <div class="social-media-card">
+                    <h2>SOCIAL MEDIA</h2>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/yowie.lheilhei"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                        <li><a href="https://www.instagram.com/yowie.lheilhei/"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@yowie.lheilhei?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
+                        <li><a href="https://www.bandlab.com/yuli099887"><i class="fa-brands fa-soundcloud"></i>Bandlab</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Right Side: Contact Form -->
+                <div class="contact-form-card">
+                    <h2>Contact me</h2>
+                    <form action="#" method="POST" class="contact-form">
+                        
+                        <p class="field-label">Name (required)</p>
+                        <div class="form-group row">
+                            <input type="text" name="firstName" placeholder="First Name" required>
+                            <input type="text" name="lastName" placeholder="Last Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" name="service" placeholder="Service">
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email (required)" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="message" rows="1" placeholder="Project description" required></textarea>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <button type="submit" class="submit-btn">Submit</button>
+                            <span class="phone-number">(+48) 994 650 5336</span>
+                        </div>
+                    </form>
+                </div>
+            
+            </div>
+        </section>
+    </main>
+<!-- 1. Artist Badge Modal -->
+    <div id="artistModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Multimedia Artistry</h2>
+            <p>I specialize in video editing, graphic design, and audio-visual production. I love blending technical architecture with creative visual design to create engaging digital experiences.</p>
+        </div>
+    </div>
+
+    <!-- 2. The About Me Image Pop-up Modal -->
+    <div id="aboutImageModal" class="modal-overlay">
+        <div class="modal-content">
+            <span id="closeAboutModal" class="close-modal">&times;</span>
+            <h2>Academic Journey</h2>
+            <img src="./assets/images/diplomaaboutme.png" alt="Diploma" style="width: 100%; max-width: 350px; border-radius: 12px; margin: 0 auto 20px auto; display: block;">
+            <p>I am proudly pursuing my degree in Computer Engineering Technology at Batangas State University - Lipa Campus, focusing on bridging hardware systems and network configurations.</p>
+        </div>
+    </div> <!-- THIS was the missing closing div! -->
+
+    <!-- 3. Gallery Full-Size Video Pop-up Modal -->
+    <div id="galleryModal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 900px; background: transparent; box-shadow: none;">
+            <span id="closeGalleryModal" class="close-modal" style="color: white; top: -10px; right: 0; font-size: 40px;">&times;</span>
+            <video id="galleryModalVideo" controls style="width: 100%; height: auto; border-radius: 16px; outline: none; background: black;">
+                <source src="./assets/videos/project_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Your Javascript File -->
+    <script src="index.js"></script>
+</body>
+</html>
