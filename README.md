@@ -23,4 +23,5 @@ This portfolio highlights my work across various disciplines, including:
 * **Vanilla JavaScript:** DOM manipulation, custom event listeners, and modular interactivity without relying on heavy external libraries.
 
 ## 🚀 How to View
-You can view the live version of this portfolio here: https://github.com/yowielheilhei/MY_PERSONAL_PORTFOLIO_GUAN_YUAN_LEI_ANGELO.git
+You can view the live version of this portfolio here: 
+https://github.com/yowielheilhei/MY_PERSONAL_PORTFOLIO_GUAN_YUAN_LEI_ANGELO
