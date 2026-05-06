@@ -375,6 +375,8 @@ img {
     margin: 0 auto;
     line-height: 1.6;
     color: #333;
+    item-align: center;
+
 }
 
 .project-item.full-width h3,
