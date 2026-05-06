@@ -24,4 +24,4 @@ This portfolio highlights my work across various disciplines, including:
 
 ## 🚀 How to View
 You can view the live version of this portfolio here: 
-https://github.com/yowielheilhei/MY_PERSONAL_PORTFOLIO_GUAN_YUAN_LEI_ANGELO
+https://yowielheilhei.github.io/MY_PERSONAL_PORTFOLIO_GUAN_YUAN_LEI_ANGELO/
